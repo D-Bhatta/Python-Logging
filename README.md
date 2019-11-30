@@ -30,3 +30,13 @@ The repository contains the following:
 ## Project Status
 
 Project is in progress
+
+## About The Project Repository
+
+### Commit Style
+
+- Use the imperative mood in the subject line
+- Do not end the subject line with a period
+- Use the body to explain what and why vs. how
+
+### Folder Structure
