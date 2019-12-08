@@ -27,3 +27,8 @@ CRITICAL:root:This is a critical message """
 
 """ ---------------------------------------------------------------------------------------------------- """
 
+def basic_config():
+    logging.basicConfig(level='DEBUG', filename='app.log', filemode='a', format='%(name)s - %(levelname)s - %(message)s')
+    The_Logging_Module()
+
+basic_config()

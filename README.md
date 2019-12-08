@@ -13,7 +13,7 @@ The repository contains the following:
 ## Sections
 
 1. [x] The Logging Module
-2. [ ] Basic Configurations
+2. [x] Basic Configurations
 3. [ ] Classes and Functions
 4. [ ] Using Handlers
 5. [ ] Other Configuration Methods
