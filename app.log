@@ -8,3 +8,6 @@ root - INFO - This is a info message
 root - WARNING - This is a warning message
 root - ERROR - This is an error message
 root - CRITICAL - This is a critical message
+6756-WARNING-This is a warning with process id
+2019-12-19 11:59:40,336-This is info with date and time
+19-Dec-19 12:02:01-This is info with date and time

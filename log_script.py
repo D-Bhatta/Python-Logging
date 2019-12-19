@@ -31,4 +31,13 @@ def basic_config():
     logging.basicConfig(level='DEBUG', filename='app.log', filemode='a', format='%(name)s - %(levelname)s - %(message)s')
     The_Logging_Module()
 
-basic_config()
+
+def formatting_output():
+    logging.basicConfig(level='DEBUG', filename='app.log', filemode='a', format='%(process)d-%(levelname)s-%(message)s')
+    logging.warning('This is a warning with process id')
+
+def formatting_output_2():
+    logging.basicConfig(level='INFO', filename='app.log', filemode='a', format='%(asctime)s-%(message)s', datefmt='%d-%b-%y %H:%M:%S')
+    logging.info('This is info with date and time')
+
+formatting_output_2()

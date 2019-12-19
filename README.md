@@ -14,10 +14,11 @@ The repository contains the following:
 
 1. [x] The Logging Module
 2. [x] Basic Configurations
-3. [ ] Classes and Functions
-4. [ ] Using Handlers
-5. [ ] Other Configuration Methods
-6. [ ] Keep Calm and Read the Logs
+3. [x] Formatting the Output
+4. [ ] Classes and Functions
+5. [ ] Using Handlers
+6. [ ] Other Configuration Methods
+7. [ ] Keep Calm and Read the Logs
 
 ## Test Coverage
 
