@@ -31,13 +31,31 @@ def basic_config():
     logging.basicConfig(level='DEBUG', filename='app.log', filemode='a', format='%(name)s - %(levelname)s - %(message)s')
     The_Logging_Module()
 
+""" output:
+root - DEBUG - This is a debud message
+root - INFO - This is a info message
+root - WARNING - This is a warning message
+root - ERROR - This is an error message
+root - CRITICAL - This is a critical message
+root - DEBUG - This is a debud message
+root - INFO - This is a info message
+root - WARNING - This is a warning message
+root - ERROR - This is an error message
+root - CRITICAL - This is a critical message """
+
 
 def formatting_output():
     logging.basicConfig(level='DEBUG', filename='app.log', filemode='a', format='%(process)d-%(levelname)s-%(message)s')
     logging.warning('This is a warning with process id')
 
+""" output:
+6756-WARNING-This is a warning with process id """
+
 def formatting_output_2():
     logging.basicConfig(level='INFO', filename='app.log', filemode='a', format='%(asctime)s-%(message)s', datefmt='%d-%b-%y %H:%M:%S')
     logging.info('This is info with date and time')
 
-formatting_output_2()
+""" output:
+2019-12-19 11:59:40,336-This is info with date and time
+19-Dec-19 12:02:01-This is info with date and time """
+
