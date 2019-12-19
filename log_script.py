@@ -59,3 +59,18 @@ def formatting_output_2():
 2019-12-19 11:59:40,336-This is info with date and time
 19-Dec-19 12:02:01-This is info with date and time """
 
+def logging_variable_data():
+    name = 'John'
+    logging.basicConfig(level='DEBUG', filename='app.log', filemode='a', format='%(asctime)s-%(process)d-%(levelname)s-%(message)s')
+    logging.error('%s raised an error', name)
+
+""" output:
+2019-12-19 12:14:49,628-10088-ERROR-John raised an error """
+
+def logging_variables_with_fstrings():
+    animal = 'cat'
+    logging.basicConfig(level='DEBUG', filename='app.log', filemode='a', format='%(asctime)s-%(process)d-%(levelname)s-%(message)s')
+    logging.error(f'{animal} has encountered an error')
+
+""" output:
+2019-12-19 12:17:07,614-12612-ERROR-cat has encountered an error """
