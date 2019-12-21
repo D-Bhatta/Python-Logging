@@ -13,3 +13,13 @@ root - CRITICAL - This is a critical message
 19-Dec-19 12:02:01-This is info with date and time
 2019-12-19 12:14:49,628-10088-ERROR-John raised an error
 2019-12-19 12:17:07,614-12612-ERROR-cat has encountered an error
+2019-12-21 11:44:19,752-12180-ERROR-Exception occurred
+Traceback (most recent call last):
+  File "j:\Education\Code\Python\Python-Logging\log_script.py", line 83, in logging_capturing_stack_traces
+    c = a/b
+ZeroDivisionError: division by zero
+2019-12-21 11:47:11,199-8548-ERROR-Exception has occurred
+Traceback (most recent call last):
+  File "j:\Education\Code\Python\Python-Logging\log_script.py", line 99, in logging_capturing_stack_traces2
+    c = a/b
+ZeroDivisionError: division by zero

@@ -74,3 +74,36 @@ def logging_variables_with_fstrings():
 
 """ output:
 2019-12-19 12:17:07,614-12612-ERROR-cat has encountered an error """
+# pylint: disable=unused-variable
+def logging_capturing_stack_traces():
+    logging.basicConfig(level='DEBUG', filename='app.log', filemode='a', format='%(asctime)s-%(process)d-%(levelname)s-%(message)s')
+    a = 5
+    b = 0
+    try:
+        c = a/b
+    except Exception as e:
+        logging.error("Exception occurred", exc_info=True)
+# pylint: disable=anomalous-backslash-in-string
+""" output:
+2019-12-21 11:44:19,752-12180-ERROR-Exception occurred
+Traceback (most recent call last):
+  File "j:\Education\Code\Python\Python-Logging\log_script.py", line 83, in logging_capturing_stack_traces
+    c = a/b
+ZeroDivisionError: division by zero """ # pylint: disable=anomalous-backslash-in-string
+
+def logging_capturing_stack_traces2():
+    logging.basicConfig(level='DEBUG', filename='app.log', filemode='a', format='%(asctime)s-%(process)d-%(levelname)s-%(message)s')
+    a = 5
+    b = 0
+    try:
+        c = a/b
+    except Exception as e:
+        logging.exception("Exception has occurred")
+
+""" output:
+2019-12-21 11:47:11,199-8548-ERROR-Exception has occurred
+Traceback (most recent call last):
+  File "j:\Education\Code\Python\Python-Logging\log_script.py", line 99, in logging_capturing_stack_traces2
+    c = a/b
+ZeroDivisionError: division by zero
+ """

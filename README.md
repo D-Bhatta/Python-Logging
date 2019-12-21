@@ -16,7 +16,7 @@ The repository contains the following:
 2. [x] Basic Configurations
 3. [x] Formatting the Output
 4. [x] Logging Variable Data
-5. [ ] Capturing Stack Trace
+5. [x] Capturing Stack Trace
 6. [ ] Classes and Functions
 7. [ ] Using Handlers
 8. [ ] Other Configuration Methods
