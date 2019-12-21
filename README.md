@@ -17,7 +17,7 @@ The repository contains the following:
 3. [x] Formatting the Output
 4. [x] Logging Variable Data
 5. [x] Capturing Stack Trace
-6. [ ] Classes and Functions
+6. [x] Classes and Functions
 7. [ ] Using Handlers
 8. [ ] Other Configuration Methods
 9. [ ] Keep Calm and Read the Logs
