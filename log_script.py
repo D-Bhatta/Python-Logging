@@ -124,3 +124,45 @@ def logging_example_logger():
     logger.error("This is an example logger")
 """ output:
 This is an example logger """
+
+#Handlers
+""" Handlers come into the picture when you want to configure your own loggers and send the logs to multiple places when they are generated. Handlers send the log messages to configured destinations like the standard output stream or a file or over HTTP or to your email via SMTP.
+
+A logger that you create can have more than one handler, which means you can set it up to be saved to a log file and also send it over email.
+
+Like loggers, you can also set the severity level in handlers. This is useful if you want to set multiple handlers for the same logger but want different severity levels for each of them. For example, you may want logs with level WARNING and above to be logged to the console, but everything with level ERROR and above should also be saved to a file. """
+
+def logging_handler_example():
+    name = __name__
+
+    # Create a custom logger
+    logger = logging.getLogger(name=name)
+
+    # Create handlers
+    c_handler = logging.StreamHandler()
+    f_handler = logging.FileHandler('app.log')
+    c_handler.setLevel(logging.WARNING)
+    f_handler.setLevel(logging.ERROR)
+
+    # Create formatters and add it to handlers
+    c_format = logging.Formatter('%(name)s - %(asctime)s-%(process)d-%(levelname)s-%(message)s')
+    f_format = logging.Formatter('%(name)s - %(asctime)s-%(process)d-%(levelname)s-%(message)s')
+    c_handler.setFormatter(c_format)
+    f_handler.setFormatter(f_format)
+
+    # Add handlers to the logger
+    logger.addHandler(c_handler)
+    logger.addHandler(f_handler)
+
+    logger.warning("this is a warning")
+    logger.error('this is an error')
+
+""" output:
+__main__ - 2020-01-06 13:03:53,024-5436-WARNING-this is a warning
+__main__ - 2020-01-06 13:03:53,083-5436-ERROR-this is an error """
+
+# Other Configuration Methods
+""" You can configure logging as shown above using the module and class functions or by creating a config file or a dictionary and loading it using fileConfig() or dictConfig() respectively. These are useful in case you want to change your logging configuration in a running application. """
+
+def logginf_file_config():
+    pass
