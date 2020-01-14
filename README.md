@@ -8,7 +8,6 @@ The repository contains the following:
 
 - All the original code
 - Modifications to the code as part of my learning journey
-- Tests to make sure the code works as intended
 
 ## Sections
 
@@ -22,17 +21,26 @@ The repository contains the following:
 8. [x] Other Configuration Methods
 9. [x] Keep Calm and Read the Logs
 
-## Test Coverage
-
 ## Technologies Used
+
+- Logging Module
+- YAML
+- CONF config file
 
 ## What I Have Learned
 
+1. How to log events
+2. Configure a custom logger
+3. Create a YAML file to configure a custom logger
+4. Create a CONF config file to configure a custom logger
+
 ## Future Scope
+
+*Add logging functionality* to ongoing and current projects.
 
 ## Project Status
 
-Project is in progress
+Project has been successfully completed.
 
 ## About The Project Repository
 
@@ -43,3 +51,5 @@ Project is in progress
 - Use the body to explain what and why vs. how
 
 ### Folder Structure
+
+- Single folder
