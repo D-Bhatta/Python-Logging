@@ -19,8 +19,8 @@ The repository contains the following:
 5. [x] Capturing Stack Trace
 6. [x] Classes and Functions
 7. [x] Using Handlers
-8. [ ] Other Configuration Methods
-9. [ ] Keep Calm and Read the Logs
+8. [x] Other Configuration Methods
+9. [x] Keep Calm and Read the Logs
 
 ## Test Coverage
 

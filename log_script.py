@@ -3,6 +3,8 @@ The logging module in Python is a ready-to-use and powerful module that is desig
 
 Adding logging to your Python program is as easy as this: """
 import logging
+import logging.config
+from yaml import safe_load
 
 """ With the logging module imported, you can use something called a “logger” to log messages that you want to see. By default, there are 5 standard levels indicating the severity of events. Each has a corresponding method that can be used to log events at that level of severity. The defined levels, in order of increasing severity, are the following:
 
@@ -164,5 +166,18 @@ __main__ - 2020-01-06 13:03:53,083-5436-ERROR-this is an error """
 # Other Configuration Methods
 """ You can configure logging as shown above using the module and class functions or by creating a config file or a dictionary and loading it using fileConfig() or dictConfig() respectively. These are useful in case you want to change your logging configuration in a running application. """
 
-def logginf_file_config():
-    pass
+def logging_file_config():
+    logging.config.fileConfig(fname='file.conf',disable_existing_loggers=False)
+
+    logger = logging.getLogger('sampleLogger')
+
+    logger.debug('This is a debug message')
+
+def logging_yaml_config():
+    with open('config.yaml', 'r') as f:
+        config = safe_load(f.read())
+        logging.config.dictConfig(config)
+    logger = logging.getLogger('sampleLogger')
+    logger.debug("This is a debug message")
+
+logging_yaml_config()
